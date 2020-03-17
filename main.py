@@ -22,6 +22,4 @@ def doesMapping(str1, str2):
     return True
 
 
-print doesMapping("foo", "bar")  # false
-print doesMapping("bar", "foo")  # true
-print doesMapping("abc", "bcd")  # true
+print doesMapping(str(sys.argv[1]), str(sys.argv[2]))

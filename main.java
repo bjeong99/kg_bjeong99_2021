@@ -1,4 +1,6 @@
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 class Main {
   public static boolean mapping(String s1, String s2) {
@@ -22,8 +24,15 @@ class Main {
   }
 
   public static void main(String[] args) {
-    System.out.println(mapping("foo", "bar"));
-    System.out.println(mapping("bar", "foo"));
-    System.out.println(mapping("abc", "bcd"));
+    BufferedReader reader = null;
+    try {
+      reader = new BufferedReader(new InputStreamReader(System.in));
+      String text = reader.readLine();
+      String[] parts = text.split(" ");
+
+      System.out.println(mapping(parts[0], parts[1]));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }
